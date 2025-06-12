@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Quartz 4</title>
+      <link>https://quartz.jzhao.xyz</link>
+      <description>Last 10 notes on Quartz 4</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Task notes</title>
+    <link>https://quartz.jzhao.xyz/_templates/Task-notes</link>
+    <guid>https://quartz.jzhao.xyz/_templates/Task-notes</guid>
+    <description>Task List URGENT Do it now Task 1 Task 2 Task 3 IMPORTANT Do it after tasks above Task 1 Task 2 Task 3 NOT URGENT / IMPORTANT Decide when to do it Task 1 Task 2 Task 3 Completed Task 1 Task 2 Task 3 .</description>
+    <pubDate>Thu, 12 Jun 2025 07:23:59 GMT</pubDate>
+  </item><item>
+    <title>Project notes</title>
+    <link>https://quartz.jzhao.xyz/_templates/Project-notes</link>
+    <guid>https://quartz.jzhao.xyz/_templates/Project-notes</guid>
+    <description>Project → 🧾 Project Description Project information Created::. {{date: DD-MM-YYYY}} {{time}} Deadline:: Hibernating::. Completion date expected::.</description>
+    <pubDate>Thu, 12 Jun 2025 07:23:59 GMT</pubDate>
+  </item><item>
+    <title>Atomic notes</title>
+    <link>https://quartz.jzhao.xyz/_templates/Atomic-notes</link>
+    <guid>https://quartz.jzhao.xyz/_templates/Atomic-notes</guid>
+    <description></description>
+    <pubDate>Thu, 12 Jun 2025 07:23:04 GMT</pubDate>
+  </item><item>
+    <title>Daily notes</title>
+    <link>https://quartz.jzhao.xyz/_templates/Daily-notes</link>
+    <guid>https://quartz.jzhao.xyz/_templates/Daily-notes</guid>
+    <description>This template needs DataView plugin created: [“{{date}} {{time}}”] tags: [“#Log/DaiLylog”] Metadata: Tag:: dailylog Created:: {{date: DD-MM-YYYY}} Week:: style: number Tracker Breakfast:: Feeling:: Working On:: Money Spent:: € Workout:: Motivation:: Lingering feelings, Observations and Thoughts Ling...</description>
+    <pubDate>Thu, 12 Jun 2025 07:23:04 GMT</pubDate>
+  </item><item>
+    <title>MOCs</title>
+    <link>https://quartz.jzhao.xyz/_templates/MOCs</link>
+    <guid>https://quartz.jzhao.xyz/_templates/MOCs</guid>
+    <description>{{title}} Index Theme1 File link Brief description Theme 2 File link Brief description .</description>
+    <pubDate>Thu, 12 Jun 2025 07:23:04 GMT</pubDate>
+  </item><item>
+    <title>Private test note</title>
+    <link>https://quartz.jzhao.xyz/articles/Private-test-note</link>
+    <guid>https://quartz.jzhao.xyz/articles/Private-test-note</guid>
+    <description>This is a test of the private backup system. This note should only appear in my private repository.</description>
+    <pubDate>Thu, 12 Jun 2025 07:23:04 GMT</pubDate>
+  </item><item>
+    <title>Public Test Post</title>
+    <link>https://quartz.jzhao.xyz/articles/Public-Test-Post</link>
+    <guid>https://quartz.jzhao.xyz/articles/Public-Test-Post</guid>
+    <description>My First Published Post This is a test of the automated publishing system. If this works, this note should appear on the published notes website.</description>
+    <pubDate>Thu, 12 Jun 2025 07:23:04 GMT</pubDate>
+  </item><item>
+    <title>On the passage of time between two people</title>
+    <link>https://quartz.jzhao.xyz/articles/archive/On-the-passage-of-time-between-two-people</link>
+    <guid>https://quartz.jzhao.xyz/articles/archive/On-the-passage-of-time-between-two-people</guid>
+    <description>As time passes So does everything The people we love The things we have grown attached to It is this very passage that makes us.</description>
+    <pubDate>Thu, 12 Jun 2025 07:23:04 GMT</pubDate>
+  </item><item>
+    <title>30 Days of Linux A Complete Guide For Beginners 1f2635c581e0801eb157eb49d86440f3</title>
+    <link>https://quartz.jzhao.xyz/articles/project-notes/30-Days-of-Linux-A-Complete-Guide-For-Beginners-1f2635c581e0801eb157eb49d86440f3</link>
+    <guid>https://quartz.jzhao.xyz/articles/project-notes/30-Days-of-Linux-A-Complete-Guide-For-Beginners-1f2635c581e0801eb157eb49d86440f3</guid>
+    <description>30 Days of Linux : A Complete Guide For Beginners Ever thought of learning the Linux Operating System? Why do software and network engineers love Linux? why Linux is different from others.</description>
+    <pubDate>Thu, 12 Jun 2025 07:23:04 GMT</pubDate>
+  </item><item>
+    <title>AI Topics</title>
+    <link>https://quartz.jzhao.xyz/articles/project-notes/AI-Topics</link>
+    <guid>https://quartz.jzhao.xyz/articles/project-notes/AI-Topics</guid>
+    <description>A list of topics in AI to explore later.</description>
+    <pubDate>Thu, 12 Jun 2025 07:23:04 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

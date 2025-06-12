@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>The importance of documentation</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Quartz 4"/><meta property="og:title" content="The importance of documentation"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The importance of documentation"/><meta name="twitter:description" content="Core Takeaway Message: Personal process documentation is important, it is easy, and if we start now, the benefits will be immense."/><meta property="og:description" content="Core Takeaway Message: Personal process documentation is important, it is easy, and if we start now, the benefits will be immense."/><meta property="og:image:alt" content="Core Takeaway Message: Personal process documentation is important, it is easy, and if we start now, the benefits will be immense."/><meta property="twitter:domain" content="quartz.jzhao.xyz"/><meta property="og:url" content="https://quartz.jzhao.xyz/articles/tope-arebi/Salford/The-importance-of-documentation"/><meta property="twitter:url" content="https://quartz.jzhao.xyz/articles/tope-arebi/Salford/The-importance-of-documentation"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="Core Takeaway Message: Personal process documentation is important, it is easy, and if we start now, the benefits will be immense."/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvbm90ZXMvbm90ZXMvcXVhcnR6L3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwYWRkaW5nOiAycmVtO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://quartz.jzhao.xyz/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://quartz.jzhao.xyz/articles/tope-arebi/Salford/The-importance-of-documentation-og-image.webp"/><meta property="og:image:url" content="https://quartz.jzhao.xyz/articles/tope-arebi/Salford/The-importance-of-documentation-og-image.webp"/><meta name="twitter:image" content="https://quartz.jzhao.xyz/articles/tope-arebi/Salford/The-importance-of-documentation-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="articles/tope-arebi/Salford/The-importance-of-documentation"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Quartz 4</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../articles/">articles</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../articles/tope-arebi/">tope arebi</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../articles/tope-arebi/Salford/">Salford</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>The importance of documentation</a></div></nav><h1 class="article-title">The importance of documentation</h1><p show-comma="true" class="content-meta"><time datetime="2025-06-12T07:23:04.000Z">Jun 12, 2025</time><span>19 min read</span></p></div></div><article class="popover-hint"><p><strong>Core Takeaway Message:</strong> Personal process documentation is important, it is easy, and if we start now, the benefits will be immense. <strong>Target Audience:</strong> Members of the department of digital IT at the University of Salford. <strong>Approximate Duration:</strong> 30 minutes <strong>Tone:</strong> Engaging, storytelling-focused, practical, forward-looking.</p>
+<p><strong>Slide 1: Title Slide</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> Unlocking Our Collective Expertise: The Power of Personal Process Notes &amp; AI-Driven Insights</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>[Your Name]</p>
+</li>
+<li>
+<p>Digital IT Department, University of Salford</p>
+</li>
+<li>
+<p>[Date of Presentation]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p><strong>(Start with a welcoming and confident tone)</strong> “Good morning/afternoon, everyone. Thank you for being here today.”</p>
+</li>
+<li>
+<p>“My name is [Your Name], and I’m excited to share some thoughts on a topic I believe holds significant potential for us all: ‘Unlocking Our Collective Expertise’.”</p>
+</li>
+<li>
+<p>“We’ll be looking at the power of personal process notes and how, eventually, we could even leverage AI to gain further insights.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>A clean, professional background. Perhaps an abstract image representing interconnectedness, knowledge, or a subtle University of Salford branding element if appropriate. A stylised key unlocking a network or brain icon.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 2: Introduction &amp; Our Journey Today</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> Why We’re Here &amp; What We’ll Explore</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>A fresh look at “documentation.”</p>
+</li>
+<li>
+<p>The untapped power of <em>our</em> individual knowledge.</p>
+</li>
+<li>
+<p>Immediate wins for individuals, teams, and the department.</p>
+</li>
+<li>
+<p>A vision for future, AI-enhanced insights.</p>
+</li>
+<li>
+<p>Your role in shaping this.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p><strong>(Engaging hook)</strong> “How many of us have ever thought, ‘If only I knew how <em>they</em> did that,’ or ‘I wish I’d written down how I solved that tricky issue last time’?”</p>
+</li>
+<li>
+<p>“Today, I want us to take a fresh look at ‘documentation’ – not as a chore, but as a powerful tool. We’ll explore the often-untapped power of our individual, everyday process knowledge.”</p>
+</li>
+<li>
+<p>“We’ll discuss the immediate, tangible benefits this can bring – for our own efficiency, for smoother handovers, for easier onboarding, and for preserving critical know-how within our department.”</p>
+</li>
+<li>
+<p>“Then, we’ll look a little further ahead at an exciting vision: how we might one day use AI to amplify these benefits, helping us make smarter strategic decisions and further streamline how we work.”</p>
+</li>
+<li>
+<p>“And most importantly, I want to discuss how each of you can play a part in this, starting with some very simple steps.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>A roadmap or journey graphic with icons representing the key agenda points. Or a lightbulb icon turning on, symbolising new perspectives.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 3: A Little About Me &amp; My Passion for This</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> My Journey to This Idea</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>Relatively new to the Digital IT team – excited to contribute!</p>
+</li>
+<li>
+<p>A lifelong “note-taker” (ask my childhood self about lists!).</p>
+</li>
+<li>
+<p>Academic background: 2 Master’s degrees, 3 research papers.</p>
+</li>
+<li>
+<p>Relevant research: “AI-Driven Knowledge Management Systems.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“Before we dive deeper, and as I’m still getting to know many of you, perhaps a very brief word on why this subject is particularly close to my heart.”</p>
+</li>
+<li>
+<p>“I’m [Your Name], and I’m relatively new to our fantastic Digital IT team here at Salford, but I’m incredibly keen to contribute and learn from you all.”</p>
+</li>
+<li>
+<p>“You could say my interest in organising information started young – I was definitely that child who obsessively made lists for just about everything! Some habits stick, I suppose!”</p>
+</li>
+<li>
+<p>“More formally, my academic journey, which includes two Master’s degrees, has allowed me to delve deeply into how organisations learn, manage information, and innovate. This led to several research papers, including one specifically titled ‘AI-Driven Knowledge Management Systems’.”</p>
+</li>
+<li>
+<p>“So, exploring how we can better capture, share, and leverage knowledge, especially with emerging technologies, isn’t just a professional interest; it’s something I’m genuinely passionate about. And I believe there’s a real, practical opportunity for us here.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>A simple, friendly photo of yourself (optional). Or, icons representing education (graduation cap), research (magnifying glass/document), and perhaps a subtle, stylised “AI brain” or network icon.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 4: The Knowledge Around Us: Explicit vs. Tacit</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> Understanding Our Knowledge Landscape</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p><strong>Explicit Knowledge:</strong> Codified, documented (manuals, official guides). The “Know-What.”</p>
+</li>
+<li>
+<p><strong>Tacit Knowledge:</strong> Experiential, intuitive, hard to articulate. The “Know-How.”</p>
+</li>
+<li>
+<p>Our official notes are great for explicit knowledge.</p>
+</li>
+<li>
+<p>But what about the “secret sauce” – our collective tacit wisdom?</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“To understand the opportunity before us, it’s helpful to distinguish between two fundamental types of knowledge within any organisation, including ours.”</p>
+</li>
+<li>
+<p>“First, there’s <strong>Explicit Knowledge</strong>. This is the knowledge that’s easily articulated, written down, codified, and shared. Think of our official departmental procedures, our system manuals, our shared knowledge base articles. It’s the essential ‘know-what’.”</p>
+</li>
+<li>
+<p>“Then, there’s <strong>Tacit Knowledge</strong>. This is far more personal, deeply rooted in individual experience, intuition, and context. It’s the practical skills, the ‘tricks of the trade’, the ‘gut feelings’ about how to solve a novel problem, the efficient shortcuts we discover. It’s the invaluable ‘know-how’.”</p>
+</li>
+<li>
+<p>“Our current departmental notes do an excellent job capturing explicit knowledge, and that’s vital.”</p>
+</li>
+<li>
+<p>“But my question today is: how effectively are we capturing and sharing that vast reservoir of tacit wisdom – the ‘secret sauce’ that each of you brings to your roles every day?”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>A two-part diagram. One side an open book or document icon (Explicit), the other a silhouette of a head with gears or a lightbulb inside (Tacit). Arrows showing current systems capture explicit well, but tacit is often uncaptured.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 5: The Reality of Uncaptured Know-How (Interactive)</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> Ever Felt This? The Power of “Unwritten Rules”</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>Quick show of hands:</p>
+<ul>
+<li>
+<p>Faced a tricky, “off-script” task recently?</p>
+</li>
+<li>
+<p>Possess unique solutions/shortcuts not in official guides?</p>
+</li>
+</ul>
+</li>
+<li>
+<p>This gap is where opportunity lies.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“Let’s make this concept of uncaptured tacit knowledge a bit more concrete with a quick interactive moment.”</p>
+</li>
+<li>
+<p>“By a quick show of hands – and please be honest! – how many of us, perhaps in the last month or so, have found ourselves tackling a task that was a bit ‘off-script’ from the standard procedure, and it gave you a bit more trouble or took longer than expected simply because you didn’t have that one specific piece of insight or prior experience? (Pause, observe hands, acknowledge).”</p>
+</li>
+<li>
+<p>“Okay, quite a few of us. Now, another quick show of hands: how many of us have developed our own specific, hard-earned experience, a useful ‘trick’, or a shortcut for some of our regular tasks that isn’t written down in any official guide, but you <em>know</em> it saves time or solves a common problem effectively? (Pause, observe hands, acknowledge).”</p>
+</li>
+<li>
+<p>“Thank you. That gap – between the challenges many of us just acknowledged facing, and the undocumented solutions and efficiencies that others possess – is precisely where personal process documentation can make a real, immediate difference. It’s about connecting those dots.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>Two simple, large question mark icons or thought bubble icons. Or silhouettes of people with raised hands. Keep it clean and focused on the audience’s participation.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 6: Introducing: Personal Process Documentation</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> Personal Process Notes: Your Know-How, Documented</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>Concise notes on <em>how</em> you execute specific tasks.</p>
+</li>
+<li>
+<p>Not novels, but practical, actionable guides for <em>you</em> (and potentially colleagues).</p>
+</li>
+<li>
+<p><strong>Strategic Focus (Not “Document Everything!“):</strong></p>
+<ul>
+<li>
+<p>Critical/High-Impact tasks (projects, goals).</p>
+</li>
+<li>
+<p>Complex or Infrequently Performed procedures.</p>
+</li>
+<li>
+<p>Tasks with “Gotchas” or common pitfalls.</p>
+</li>
+<li>
+<p>Likely for handover/delegation.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“So, what’s the first step in bridging this gap? I propose something straightforward: <strong>Personal Process Documentation</strong>.”</p>
+</li>
+<li>
+<p>“This is simply about each of us taking concise, practical notes on <em>how</em> we execute our specific tasks and projects. Think step-by-step guides for recurring tasks unique to your workflow, checklists for complex procedures, notes on troubleshooting common issues you encounter, or key contacts for specific parts of a process.”</p>
+</li>
+<li>
+<p>“Crucially, this isn’t about writing novels or creating burdensome new official documents. It’s about creating practical, actionable notes primarily for your <em>own</em> benefit, which can then easily benefit others.”</p>
+</li>
+<li>
+<p>“And I want to be absolutely clear: this isn’t about trying to document every single micro-action we take. That would be overwhelming and counterproductive. The key is to be <strong>strategic and focus our efforts</strong>. We should prioritise documenting processes or tasks that are:”</p>
+</li>
+<li>
+<p>“Firstly, <strong>Critical or High-Impact</strong> – those directly tied to key projects, our individual performance goals, or core departmental objectives.”</p>
+</li>
+<li>
+<p>“Secondly, <strong>Complex or Infrequently Performed procedures</strong> – where details are easily forgotten between instances.”</p>
+</li>
+<li>
+<p>“Thirdly, tasks known to have <strong>‘Gotchas’ or common pitfalls</strong> not covered in official guides.”</p>
+</li>
+<li>
+<p>“And finally, tasks you anticipate <strong>needing to pass on or explain to others</strong> in the future.”</p>
+</li>
+<li>
+<p>“It’s about targeted documentation that delivers the most value for the effort involved.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>An icon of a notebook and pen, or a stylised checklist. Bullet points on the slide could have small, relevant icons (e.g., target for critical, brain for complex, warning sign for gotchas, people icon for handover).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 7: The Immediate Wins: For You, The Individual</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> What’s In It For You? (Starting Today!)</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>Enhanced personal efficiency &amp; clarity.</p>
+</li>
+<li>
+<p>Reduced cognitive load (less to remember!).</p>
+</li>
+<li>
+<p>Easier to pick up tasks after a break.</p>
+</li>
+<li>
+<p>Consistency in your own work.</p>
+</li>
+<li>
+<p>A foundation for self-reflection &amp; improvement.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“Let’s talk about the immediate, tangible benefits of this simple practice, starting with what’s in it for <em>you</em> as an individual.”</p>
+</li>
+<li>
+<p>“Firstly, it brings <strong>enhanced personal efficiency and clarity</strong>. Documenting your process forces you to think it through, often revealing simpler or better ways to do things.”</p>
+</li>
+<li>
+<p>“It <strong>reduces your cognitive load</strong>. You don’t have to keep every intricate step of every process in your head. Your notes become your external brain.”</p>
+</li>
+<li>
+<p>“This makes it much <strong>easier to pick up tasks after a break</strong>, whether that’s a holiday or just switching between different projects. You can get back up to speed much faster.”</p>
+</li>
+<li>
+<p>“It promotes <strong>consistency in your own work</strong>, ensuring you don’t miss crucial steps, especially for tasks you don’t do every day.”</p>
+</li>
+<li>
+<p>“And finally, the very act of documenting can be a powerful tool for <strong>self-reflection and identifying areas for your own process improvement</strong>.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>An icon of a person with a lightbulb above their head, or a smoothly turning gear. Focus on individual empowerment.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 8: The Immediate Wins: Smoother Handovers &amp; Onboarding</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> Powering Up Our Team: Handovers &amp; Onboarding</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>Dramatically smoother handovers (holidays, role changes).</p>
+</li>
+<li>
+<p>Reduced burden on colleagues taking over.</p>
+</li>
+<li>
+<p>Faster, more effective onboarding for new hires/internal moves.</p>
+</li>
+<li>
+<p>Captures the “how-to” beyond official manuals.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“The individual benefits are compelling, but the positive impact quickly extends to our colleagues and the wider team, especially when it comes to handovers and onboarding.”</p>
+</li>
+<li>
+<p>“Imagine how much <strong>smoother handovers</strong> could be – whether someone is going on annual leave, moving to a new role within the department, or even leaving the university. Their personal process notes provide an invaluable head-start for the person stepping in.”</p>
+</li>
+<li>
+<p>“This significantly <strong>reduces the burden and stress</strong> on colleagues taking over tasks, allowing them to become productive much faster.”</p>
+</li>
+<li>
+<p>“For <strong>new hires, or for existing staff moving into new roles within Digital IT</strong>, these notes can make their onboarding experience dramatically faster and more effective. They get access not just to the official manuals, but to the practical, day-to-day ‘how-to’ from experienced team members.”</p>
+</li>
+<li>
+<p>“This is about capturing that crucial operational wisdom that often lives only in people’s heads.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>Two figures shaking hands or passing a baton. Or a “welcome” sign with an arrow showing an upward trajectory (faster onboarding). Icons representing different roles in IT (BA, Dev, Service Desk) connecting.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 9: The Immediate Wins: Safeguarding Our “Generational Knowledge”</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> Protecting Our “Secret Sauce”: The Knowledge Cliff</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>Many organisations have long-serving, deeply knowledgeable staff.</p>
+</li>
+<li>
+<p>Risk: “Generational Knowledge Cliff” if many depart around the same time.</p>
+</li>
+<li>
+<p>Losing invaluable, hyperspecific “secret sauce.”</p>
+</li>
+<li>
+<p>Personal documentation <em>now</em> helps retain this vital experience.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“There’s another critical, immediate benefit, especially relevant for established organisations like ours that are fortunate to have many dedicated, long-term staff.”</p>
+</li>
+<li>
+<p>“Over many years, invaluable, often highly specific operational knowledge – what we might call the ‘secret sauce’ that keeps things running optimally – naturally becomes concentrated with our most experienced colleagues.”</p>
+</li>
+<li>
+<p>“A common pattern we observe is that these groups of long-serving staff, having shared similar career journeys, may also approach significant milestones, like retirement, within a similar general timeframe. This isn’t a criticism; it’s a natural lifecycle.”</p>
+</li>
+<li>
+<p>“The risk, however, is what we could term a <strong>‘Generational Knowledge Cliff.’</strong> If several key individuals with this deep, tacit knowledge depart concurrently, the department can face a sudden and substantial loss of critical operational wisdom, creating a knowledge vacuum that’s incredibly hard to fill quickly.”</p>
+</li>
+<li>
+<p>“By actively promoting and creating personal process documentation <em>now</em>, we provide a vital mechanism to capture and retain this invaluable, often unwritten, experience <em>before</em> it walks out the door. This safeguards our operational continuity and our collective know-how for the future.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>An image of a vault or a treasure chest, symbolising valuable knowledge. Or a graph showing a “cliff edge” with an arrow showing documentation as a safety net.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 10: The Immediate Wins: Team &amp; Departmental Effectiveness</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> Stronger Together: Department-Wide Gains</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>Improved collaboration (understanding each other’s workflows).</p>
+</li>
+<li>
+<p>Excellent resource for informal cross-training.</p>
+</li>
+<li>
+<p>Organic emergence of best practices.</p>
+</li>
+<li>
+<p>Potential for reduced errors and greater consistency.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“The ripple effects continue, boosting overall team and departmental effectiveness.”</p>
+</li>
+<li>
+<p>“When individuals document their processes, it fosters <strong>improved collaboration</strong>. It becomes easier to understand how colleagues approach related tasks, leading to better integration of efforts.”</p>
+</li>
+<li>
+<p>“These notes become an <strong>excellent resource for informal cross-training</strong>. Team members can more easily learn aspects of each other’s roles, increasing our collective resilience and flexibility.”</p>
+</li>
+<li>
+<p>“This can lead to the <strong>organic emergence and adoption of best practices</strong>. As people share their efficient methods, others can learn from them, naturally raising the bar for the whole department.”</p>
+</li>
+<li>
+<p>“And ultimately, clearer, documented processes have the potential to lead to <strong>reduced errors and greater consistency</strong> in how we deliver our services and projects.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>A group of diverse people working together, or interconnected gears working smoothly. Icons representing different IT functions (analysis, development, support, delivery) linked together.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 11: Summary of Immediate Gains – The Power in Our Hands Today!</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> The Value Proposition: Clear &amp; Present Benefits</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p><strong>All these benefits are achievable NOW.</strong></p>
+</li>
+<li>
+<p>Increased personal efficiency.</p>
+</li>
+<li>
+<p>Seamless handovers &amp; faster onboarding.</p>
+</li>
+<li>
+<p>Safeguarded critical experience.</p>
+</li>
+<li>
+<p>Enhanced team collaboration &amp; consistency.</p>
+</li>
+<li>
+<p><strong>No complex systems needed to start. Just commitment.</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“So, to be absolutely clear, and this is a crucial point: <strong>every benefit we’ve just covered – the increased personal efficiency, the seamless handovers, the faster onboarding, the safeguarding of critical experience, and the enhanced team collaboration – these are all significant, tangible advantages we can start realising</strong> <em><strong>right now</strong></em><strong>.</strong>”</p>
+</li>
+<li>
+<p>“These gains are achievable simply by each of us committing to the straightforward practice of creating and maintaining our own personal process documentation. <strong>No complex systems, no lengthy development times, no major budget approvals are required for these foundational improvements.</strong>”</p>
+</li>
+<li>
+<p>“The power to make these positive changes, to improve how we work individually and collectively, is literally in our hands today. It starts with a simple decision to capture our know-how.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>A bold, impactful slide. Perhaps a large green tick mark next to “Benefits NOW!” or a hand holding a glowing lightbulb. Use strong, clear typography.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 12: The Future Amplified: AI-Powered Knowledge Leverage</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> Looking Ahead: What If We Could Amplify This?</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>Building on our documented knowledge foundation.</p>
+</li>
+<li>
+<p>Imagine an AI that understands our collective experience.</p>
+</li>
+<li>
+<p>Not just search, but <em>insight generation</em>.</p>
+</li>
+<li>
+<p>This is a <em>future vision</em>, a potential evolution.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“Now, having established the immediate and substantial value of capturing and manually accessing our individualised knowledge, let’s explore an exciting future possibility. This is about building on that strong foundation.”</p>
+</li>
+<li>
+<p>“What if we could then take this <em>already powerful asset</em> of documented personal processes and elevate its utility even further? Imagine an AI tool, securely trained on our department’s anonymised collective experience, that could understand the nuances within these notes.”</p>
+</li>
+<li>
+<p>“This wouldn’t just be a simple keyword search. We’re talking about the potential for genuine <em>insight generation</em> – identifying patterns, highlighting challenges, and suggesting optimisations.”</p>
+</li>
+<li>
+<p>“I want to stress that this is a <em>future vision</em>, a potential evolution of what we start building today. It’s not something for immediate implementation, but a glimpse of what could be possible.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>A slightly futuristic graphic. Perhaps a network of interconnected nodes with an “AI brain” at the centre, processing information. Or a magnifying glass over data points, revealing patterns.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 13: AI Benefits: Strategic &amp; Managerial Insights</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> AI for Strategic Advantage: Managerial View</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>Identify systemic challenges &amp; bottlenecks across processes.</p>
+</li>
+<li>
+<p>Highlight areas for optimisation &amp; standardisation (best practices).</p>
+</li>
+<li>
+<p>Inform targeted training needs based on collective gaps.</p>
+</li>
+<li>
+<p>Data-driven decision-making for departmental improvements.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“At a strategic or managerial level, such an AI tool could offer powerful capabilities.”</p>
+</li>
+<li>
+<p>“It could help <strong>identify systemic challenges and bottlenecks</strong> that might be occurring across multiple individuals’ processes, even if each person only sees their part of the problem.”</p>
+</li>
+<li>
+<p>“It could <strong>highlight areas for optimisation and standardisation</strong> by comparing different approaches to similar tasks documented by various team members, helping us uncover and adopt true best practices.”</p>
+</li>
+<li>
+<p>“Patterns in the documented experiences could <strong>inform targeted training needs</strong>, revealing collective gaps in knowledge or skills that we could then address proactively.”</p>
+</li>
+<li>
+<p>“Ultimately, this provides a pathway to more <strong>data-driven decision-making</strong> for departmental improvements, based on the actual lived experiences of the team.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>A dashboard interface mock-up showing analytics or insights. Or a “big picture” view of interconnected processes with highlighted areas.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 14: AI Benefits: Empowering Individuals &amp; Onboarding</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> AI for Personal Empowerment: Faster Learning</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>Accelerated, context-aware onboarding for new staff.</p>
+<ul>
+<li>“How do I do X for Project Y?” <span>→</span> AI provides curated steps.</li>
+</ul>
+</li>
+<li>
+<p>“Just-in-time” learning &amp; troubleshooting for all.</p>
+</li>
+<li>
+<p>Reduces repetitive questions to mentors/seniors.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“The benefits wouldn’t just be managerial; they would also significantly empower individuals, especially new team members.”</p>
+</li>
+<li>
+<p>“Imagine <strong>accelerated, context-aware onboarding</strong>. A new starter could ask the AI, ‘How do I complete the requirements gathering phase for a student portal project?’ and receive step-by-step guidance synthesized from the collective documented experiences of our seasoned Business Analysts, not just a generic manual.”</p>
+</li>
+<li>
+<p>“For all of us, it could provide <strong>‘just-in-time’ learning and troubleshooting support</strong>. Stuck on a less frequent task? Ask the AI for a quick reminder or common solutions, drawing on the distilled wisdom of colleagues.”</p>
+</li>
+<li>
+<p>“This, in turn, <strong>reduces the burden of repetitive questions on mentors and senior staff</strong>, freeing them up for more complex challenges.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>A new team member confidently navigating a system with AI assistance (e.g., a chat interface). Or a “fast forward” icon applied to a learning curve.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 15: Our Path Forward: Proposal &amp; Call to Action</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> Starting the Journey: Our Next Steps</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p><strong>Short-Term (Let’s start now!):</strong></p>
+<ul>
+<li>
+<p>Encourage personal process note-taking.</p>
+</li>
+<li>
+<p>Share simple templates/suggested tools (OneNote, etc.).</p>
+</li>
+<li>
+<p>Voluntary pilot group to explore &amp; share experiences?</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Longer-Term (The AI Vision):</strong></p>
+<ul>
+<li>
+<p>This is a conversation starter.</p>
+</li>
+<li>
+<p>No immediate implementation plan for AI.</p>
+</li>
+<li>
+<p><strong>Interested in exploring this further? Let’s talk!</strong> (Form a working group?)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“So, how do we move forward from here?”</p>
+</li>
+<li>
+<p>“My <strong>short-term proposal is simple and actionable: let’s start now by simply encouraging and embracing the habit of creating these personal process notes.</strong> We could share a few simple templates or suggest preferred tools that many of us already use, like OneNote, or perhaps a dedicated space within our existing knowledge base for these <em>personal</em> drafts.”</p>
+</li>
+<li>
+<p>“Perhaps we could even form a small, <strong>voluntary pilot group</strong> to actively try this for a month and then share their experiences and any useful templates they develop.”</p>
+</li>
+<li>
+<p>“Regarding the <strong>longer-term AI integration, I want to reiterate: this is a forward-looking vision.</strong> I understand this isn’t something that can be implemented overnight, and I don’t have a fully detailed practical implementation plan to present today for that grander vision.”</p>
+</li>
+<li>
+<p>“My primary goal with this aspect is to spark a conversation and gauge interest. <strong>If this concept of leveraging our collective experience through an intelligent system resonates with you, and particularly if anyone is interested in exploring how we might build towards this, I would be very keen to collaborate.</strong> Perhaps we could form a small, informal working group to investigate potential AI tools, consider data privacy, and outline what a future pilot project might involve.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>A split slide: one side showing simple tools like a notebook/pen (Short-Term), the other side a more futuristic AI icon (Longer-Term). A “Let’s Talk” or “Join the Conversation” speech bubble.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Slide 16: Core Message &amp; Thank You</strong></p>
+<ul>
+<li>
+<p><strong>Slide Title:</strong> Key Takeaway: Easy Start, Immense Benefits</p>
+</li>
+<li>
+<p><strong>Key Content Points:</strong></p>
+<ul>
+<li>
+<p>Personal process documentation is important.</p>
+</li>
+<li>
+<p>It’s easy to start.</p>
+</li>
+<li>
+<p>The benefits – immediate and future – are immense.</p>
+</li>
+<li>
+<p>Let’s unlock our collective expertise, together.</p>
+</li>
+<li>
+<p><strong>Thank You! Questions?</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Speaker Notes:</strong></p>
+<ul>
+<li>
+<p>“So, if there are just a few things to take away from our discussion today, it’s this:”</p>
+</li>
+<li>
+<p>“<strong>Personal process documentation is incredibly important</strong> for individual efficiency, team cohesion, and departmental resilience.”</p>
+</li>
+<li>
+<p>“<strong>It’s surprisingly easy to start.</strong> Focus on high-value tasks, keep it practical, and use tools you’re comfortable with.”</p>
+</li>
+<li>
+<p>“And finally, <strong>the benefits – both the immediate ones we can achieve now, and the exciting future potential with AI – are truly immense.</strong>”</p>
+</li>
+<li>
+<p>“I genuinely believe that by embracing this, we can unlock our collective expertise and make Digital IT at Salford an even more effective and supportive place to work.”</p>
+</li>
+<li>
+<p>“Thank you very much for your time and attention. I’d now be happy to answer any questions you might have or hear your thoughts.”</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Suggestion:</strong></p>
+<ul>
+<li>A strong, clean design. Perhaps the main presentation title again, or a graphic summarising the core message (e.g., a seed growing into a large tree). University of Salford logo. Contact information if desired.</li>
+</ul>
+</li>
+</ul>
+<p>This detailed draft should provide a solid structure and narrative for your presentation. Remember to rehearse it to get a feel for the timing and to deliver it with genuine enthusiasm! Good luck!</p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../../postscript.js" type="module"></script></html>
